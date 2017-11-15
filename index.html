@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas exercice 2</title>
+    <meta http-equiv="refresh" content="2; URL=index.html" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="draw" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('draw');
+    var ctx = c.getContext('2d');
+
+    // Commencement
+    ctx.beginPath();
+    // 1 + 1 = emplacement 2 = largeur 3 = hauteur
+    // Toit
+    ctx.fillStyle = '#D7823D'; // Couleur
+    //rotation  du carré toit + (4)
+    ctx.rotate(Math.PI / 4);
+    ctx.fillRect(155,-127,140,140);
+    // Carré principal
+    //rotation  du carré pincipal - (4)
+    ctx.rotate(Math.PI / -4);
+    ctx.fillStyle = '#A1D8E6'; // Couleur
+    ctx.fillRect(100,120,200,230);
+    // Petit carré droit gauche + porte
+    ctx.fillStyle = '#C9C9C9'; // Couleur
+    ctx.fillRect(120,140,50,50);
+    ctx.fillRect(230,140,50,50);
+    ctx.fillRect(175,280,50,70);
+
+    ctx.stoke();
+    ctx.closePath();
+    </script>
